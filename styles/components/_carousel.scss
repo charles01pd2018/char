@@ -11,6 +11,11 @@
         grid-template-columns: 1fr 1fr;
 
         .carousel-display-wrapper {
+
+            .carousel-state-tracker {
+                padding-top: 1rem;
+            }
+            
             @media (min-width: $breakpoint--medium) {
                 min-height: 75vh;
             }
