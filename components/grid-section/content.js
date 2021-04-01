@@ -2,11 +2,11 @@ export const GridSectionContent = {
     images: [ 
         {
             imagePath: '/favicon.svg',
-            imageAltText: 'image 1 alt text',
+            imageAltText: 'image 2 alt text',
         }, 
         {
-            imagePath: '/favicon.svg',
-            imageAltText: 'image 2 alt text',
+            imagePath: '/static/branding/yooshLogo.svg',
+            imageAltText: 'yoosh_crypto logo',
         }, 
     ],
     description: {

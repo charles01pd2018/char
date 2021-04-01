@@ -19,7 +19,7 @@
         .carousel-description-wrapper {
             text-align: left;
             background-color: var(--neutral-background--compliment);
-            padding: 1.5rem;
+            padding: 2.3rem;
 
             @media (min-width: $breakpoint--medium) {
                 position: absolute;
@@ -39,7 +39,8 @@
 
                 .carousel-description-features-list {
                     list-style-type: square;
-
+                    padding-left: 0.8rem;
+                    
                     .carousel-description-feature {
                         padding-bottom: 0.6rem;
                     }

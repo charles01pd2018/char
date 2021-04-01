@@ -5,7 +5,7 @@ import Head from 'next/head';
 import { DefaultLayout } from '../layout';
 
 // components
-import { Hero, FlexPanel, GridSection, Carousel } from '../components';
+import { HeroWave, FlexPanel, GridSection, Carousel } from '../components';
 
 
 const Home = ({
@@ -17,7 +17,7 @@ const Home = ({
                     <link rel="icon" href="/favicon.ico" />
                 </Head>
 
-                  <Hero />
+                  <HeroWave />
                   <GridSection />
                   <Carousel />
                   <FlexPanel />

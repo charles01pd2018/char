@@ -7,7 +7,7 @@ export const CarouselContent = [
                     imageAltText: 'crypto block home page screenshot',
                 }, 
                 {
-                    imagePath: '/static/projects/crypto-block/logo.png',
+                    imagePath: '/static/projects/crypto-block/logo.svg',
                     imageAltText: 'crypto block logo',
                 },
             ],
