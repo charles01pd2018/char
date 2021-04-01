@@ -71,7 +71,7 @@ const Carousel = ({
                                         </div>
 
                                         <div className='carousel-state-tracker'>
-                                            <p>{carouselIndex + 1} of {CarouselContent.length}</p>
+                                            {carouselIndex + 1} of {CarouselContent.length}
                                         </div>
                                     </div>
 
