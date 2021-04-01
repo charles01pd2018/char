@@ -1,0 +1,98 @@
+.carousel-background {
+    background-color: var(--nerutal-background);
+
+    .carousel-title-wrapper {
+        padding-bottom: 1.5rem;
+    }
+
+    .carousel-wrapper {
+        display: grid;
+        gap: 5rem;
+        grid-template-columns: 1fr 1fr;
+
+        .carousel-display-wrapper {
+            @media (min-width: $breakpoint--medium) {
+                min-height: 75vh;
+            }
+        }
+
+        .carousel-description-wrapper {
+            text-align: left;
+            background-color: var(--neutral-background--compliment);
+            padding: 1.5rem;
+
+            @media (min-width: $breakpoint--medium) {
+                position: absolute;
+                left: 40%;
+                right: 3%;
+    
+                margin-top: 2rem;
+                z-index: 1;             
+            }
+            
+            @media (max-width: $breakpoint--large) {
+                left: 35%;
+            }
+
+            .carousel-description-features-wrapper {
+                padding-top: 1rem;
+
+                .carousel-description-features-list {
+                    list-style-type: square;
+
+                    .carousel-description-feature {
+                        padding-bottom: 0.6rem;
+                    }
+                }
+            }
+        }
+
+        .carousel-tags-wrapper {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .carousel-toggle-wrapper {
+            display: flex;
+            padding: 1rem 0.5rem;
+
+            .carousel-toggle-left {
+                flex-basis: 50%;
+            }
+
+            .carousel-toggle-right {
+                flex-basis: 50%;
+                text-align: right;
+            }
+        }
+
+        @media (max-width: $breakpoint--medium) {
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
+/* animations */
+// .carousel-right-enter {
+//     animation: right-carousel-slide-in 1s ease;
+
+//     @media(max-width: $breakpoint--medium) {
+//         animation: light-fade-in 0.7s ease;
+//     }
+// }
+
+// .carousel-left-enter {
+//     animation: left-carousel-slide-in 1s ease;
+
+//     @media(max-width: $breakpoint--medium) {
+//         animation: light-fade-in 0.7s ease;
+//     }
+// }
+
+// @keyframes right-carousel-slide-in {
+//     from { opacity: 0.6; margin-left: 30%; }
+// }
+
+// @keyframes left-carousel-slide-in {
+//     from { opacity: 0.6; margin-right: 30%; }
+// }

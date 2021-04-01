@@ -1,0 +1,22 @@
+.image-overlay-wrapper {
+    display: grid; 
+    grid-template-columns: repeat(12, 1fr);
+
+    .overlay-image {
+        justify-self: center;
+
+        // image on top
+        &:first-of-type {
+            grid-column: 1 / span 10;
+            grid-row: 1;
+            padding-top: 30%;
+            z-index: 1;
+        }
+
+        // background image
+        &:last-of-type {
+            grid-column: 4 / -1;
+            grid-row: 1;
+        }
+    }
+}

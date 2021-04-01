@@ -1,0 +1,39 @@
+/*--------------------------------------------------------------
+# Variables
+--------------------------------------------------------------*/
+$chevron--size: 				1rem;		        // width and height
+$chevron--thickness: 			0.3rem;		    	// stroke width
+
+/*--------------------------------------------------------------
+# Styling
+--------------------------------------------------------------*/
+.chevron {
+	&::before {
+		border-style: solid;
+		content: '';
+		left: 0.15em;
+		position: relative;
+		top: 0.15em;
+		transform: rotate(-45deg);
+		vertical-align: top;
+		display: inline-block;
+		
+		height: $chevron--size;
+		width: $chevron--size;
+		border-width: $chevron--thickness $chevron--thickness 0 0;
+	}
+
+	&.right {
+		&::before {
+			left: 0;
+			transform: rotate(45deg);
+		}
+	}
+
+	&.left {
+		&::before {
+			left: 0.25em;
+			transform: rotate(-135deg);
+		}
+	}
+}

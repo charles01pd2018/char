@@ -1,0 +1,53 @@
+.hero-wave-background {
+    background-image: radial-gradient( circle at top right, var(--main-background), var(--main-color) 100% ); // sunshine gradient
+
+    .hero-wave-wrapper {
+        display: flex;
+        padding: 5rem 0; // vertically align
+
+        .hero-wave-content {
+            text-align: left;
+            flex-basis: 65%;
+            padding-right: 1rem;
+            line-height: 5rem;
+
+            @media (max-width: $breakpoint--large) {
+                line-height: 4rem;
+            }
+        }
+
+        .hero-wave-visual-wrapper {
+            flex-basis: 35%;
+
+            .hero-wave-visual-image {
+                min-width: 25rem;
+                min-height: 25rem;
+
+                @media (max-width: $breakpoint--large) {
+                    /* !!! STOP THE SHRINKING !!! */
+                    min-width: 20rem;
+                    min-height: 20rem;
+                }
+            }
+        }
+
+        @media(max-width: $breakpoint--medium) {
+            flex-direction: column;
+            padding: 2rem 0;
+
+            .hero-wave-content {
+                text-align: center;
+                padding-right: 0; // variable reset
+            }
+
+            .hero-wave-visual-wrapper {
+                order: -1;
+
+                .hero-wave-visual-image {
+                    max-width: 27rem;
+                    max-height: 27rem;
+                }
+            }
+        }
+    }
+}
