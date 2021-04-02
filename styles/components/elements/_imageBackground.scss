@@ -1,9 +1,10 @@
 .image-background-wrapper {
     background-size: 100% 100%;
-    border: 3px solid var(--contrast-color)
-    ;
+    filter: saturate(0.7);
+    border: 3px solid var(--contrast-color);
+
     .image-on-top {
-        padding-top: 12rem;
+        padding-top: 11rem;
         margin-bottom: 1rem;
 
         @media (max-width: $breakpoint--medium) {
