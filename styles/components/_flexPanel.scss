@@ -19,10 +19,13 @@
         margin: 1.5em 1em;
         padding: 1.5em;
 
-        .flex-panel-card-image {
-            width: 80%;
-            border-radius: 1rem;
+        .card-image-wrapper {
             border: 3px solid var(--contrast-color);
+            border-radius: 1rem;
+
+            .flex-panel-card-image {
+                width: 80%;
+            }
         }
     }
 }
