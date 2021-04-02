@@ -14,12 +14,15 @@ const HeroWave = ({
                     </div>
 
                     <div className='hero-wave-visual-wrapper'>
-                        <object type="image/svg+xml" data='/static/branding/pofoAnimation.svg' alt='pofo-site-logo-animation' className='hero-wave-visual-image site-image' >
-                            Pofo Site Logo
+                        <object type="image/svg+xml" data='/static/branding/pofoAnimation.svg' alt='pofo-site-logo-animation' role='presentation' className='hero-wave-visual-image' >
+                            Pofo Site Logo Animation
                         </object>
                     </div>
                 </div>
             </div>
+            <object type="image/svg+xml" data='/static/styling/wavesAnimation.svg' alt='hero-waves-animation' role='presentation' >
+                Hero Waves Animation
+            </object>
         </section>
     );
 }
