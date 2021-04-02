@@ -21,6 +21,8 @@
 
         .flex-panel-card-image {
             width: 80%;
+            border-radius: 1rem;
+            border: 3px solid var(--contrast-color);
         }
     }
 }

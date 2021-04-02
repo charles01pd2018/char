@@ -27,8 +27,8 @@ const GridSection = ({
                 </div>
 
                 <div className='grid-section-description-wrapper'>
-                    <h3>{description.descriptionTitle}</h3>
-                    <p className='text-sm'>{description.descriptionText}</p>
+                    <h1>{description.descriptionTitle}</h1>
+                    <p>{description.descriptionText}</p>
                 </div>
 
             </div>
