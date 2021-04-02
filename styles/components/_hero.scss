@@ -12,6 +12,17 @@
             padding-right: 1rem;
             line-height: 5rem;
 
+            .hero-wave-content-description {
+                width: 0;
+                white-space: nowrap; // keeps the content on a single line
+                overflow: hidden; 
+                border-right: .2em solid var(--contrast-color);
+                letter-spacing: .04em; 
+
+                animation: typing 1.5s 1.6s steps(40, end) forwards,
+                    blink-caret 1s step-end infinite;
+            }
+
             @media (max-width: $breakpoint--large) {
                 line-height: 4rem;
             }
@@ -39,6 +50,10 @@
             .hero-wave-content {
                 text-align: center;
                 padding-right: 0; // variable reset
+
+                .hero-wave-content-description {
+                    margin: 0 auto; // for typewriter animation
+                }
             }
 
             .hero-wave-visual-wrapper {
@@ -51,4 +66,15 @@
             }
         }
     }
+}
+
+// typing effect
+@keyframes typing {
+    to { width: 19em; }
+}
+  
+// typewriter cursor
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: var(--contrast-color); }
 }
