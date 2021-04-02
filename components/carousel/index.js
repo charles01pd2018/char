@@ -3,7 +3,7 @@ import { useState } from 'react';
 import classNames from 'classnames';
 
 // elements
-import { ImageOverlay, Tags } from '../elements';
+import { ImageBackground, Tags } from '../elements';
 
 // content
 import { CarouselContent } from './content';
@@ -64,9 +64,9 @@ const Carousel = ({
                                             {
                                                 carouselDisplayDestination ? ( 
                                                     <a href={carouselDisplayDestination} target='_blank'>
-                                                        <ImageOverlay className='zoom-image' imageClassName='carousel-image' images={displayImages} />
-                                                    </a> ) : 
-                                                ( <ImageOverlay images={displayImages} /> )
+                                                        <ImageBackground className='zoom-image' imageBackgroundURL={displayImages[0].imagePath} imageOnTop={displayImages[1]}  />
+                                                    </a> ) : ( 
+                                                    <ImageBackground imageBackgroundURL={displayImages[0].imagePath} imageOnTop={displayImages[1]} /> )
                                             }
                                         </div>
 

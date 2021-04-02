@@ -13,8 +13,8 @@ export const CarouselContent = [
             ],
             carouselDisplayDestination: 'https://cryptoblock.me/' // optional
         },
-        carouselDescriptionTitle: 'Crypto Block: Inspired by my personal obsession with crypto',
-        carouselDescriptionText: '!!! My First Deployed Project !!!  Will always have a special place in my heart',
+        carouselDescriptionTitle: 'Crypto Block',
+        carouselDescriptionText: '!!! My First Deployed Project !!! Inspired by my personal obsession with crypto. Will always have a special place in my heart.',
         carouselDescriptionFeatures: { // optional
             featuresTitle: 'Tech Learnings',
             featuresList: [
