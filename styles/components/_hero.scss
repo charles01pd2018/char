@@ -1,10 +1,5 @@
 .hero-wave-background {
     background-image: radial-gradient( circle at top right, var(--main-background), var(--main-color) 100% ); // sunshine gradient
-    height: 127vh;
-
-    @media(max-width: $breakpoint--medium) {
-        height: 97vh;
-    }
 
     .hero-wave-wrapper {
         display: flex;
