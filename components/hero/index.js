@@ -1,3 +1,6 @@
+// dependencies
+import Link from 'next/link';
+
 // content
 import { HeroWaveContent } from './content';
 
@@ -18,6 +21,10 @@ const HeroWave = ({
                             Pofo Site Logo Animation
                         </object>
                     </div>
+                </div>
+
+                <div className='hero-wave-redirect'>
+                    <Link href='#grid-section'><a><span className='chevron right site-link'></span></a></Link>
                 </div>
             </div>
             <object type="image/svg+xml" data='/static/styling/wavesAnimation.svg' alt='hero-waves-animation' role='presentation' >
