@@ -5,14 +5,12 @@
 }
 
 .site-link {
-    cursor: pointer;
+    cursor: pointer; // for non links
+
+    transition: transform 0.3s, color 0.3s;
     
     &:hover {
-        animation: pop-out 0.3s ease forwards;
+        transform: translate(0.1rem, 0.1rem);
         color: var(--link-hover-color);
     }
-}
-
-@keyframes pop-out {
-    to { transform: translate(0.1rem, 0.1rem); }
 }
