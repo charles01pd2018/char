@@ -1,6 +1,7 @@
 .image-overlay-wrapper {
     display: grid; 
     grid-template-columns: repeat(12, 1fr);
+    padding-bottom: 1rem;
 
     .overlay-image {
         justify-self: center;
