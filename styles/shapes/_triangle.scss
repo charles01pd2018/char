@@ -1,0 +1,39 @@
+/*--------------------------------------------------------------
+# Variables
+--------------------------------------------------------------*/
+$triangle-size: 			1.5rem;		            // width and height
+$triangle-scaled-size:      $triangle-size * 1.1;    // scaled width and height for animations
+
+@mixin scale-triangle() {
+    border-left: $triangle-scaled-size solid transparent;
+    border-right: $triangle-scaled-size solid transparent;
+    border-top: $triangle-scaled-size solid;
+}
+
+/*--------------------------------------------------------------
+# Styling
+--------------------------------------------------------------*/
+.triangle-down {
+    width: 0; 
+    height: 0; 
+    border-left: $triangle-size solid transparent;
+    border-right: $triangle-size solid transparent;
+    border-top: $triangle-size solid;
+
+    transition: border 0.15s;
+    animation: make-triangle-big 1s 3s;
+
+    &.round {
+        border-radius: $triangle-size / 5;
+    }
+
+    &:hover {
+        @include scale-triangle();
+    }
+  }
+
+@keyframes make-triangle-big {
+    to {
+        transform: translate(-50%, -50%);
+    }
+}
