@@ -44,7 +44,6 @@ const Carousel = ({
             <div className='container'>
                 <div className='carousel-title-wrapper'>
                     <h1>Projects</h1>
-                    <p>Only semi-presentable projects are showcased to limit embarrassment</p>
                 </div>
 
                     { CarouselContent.map( ( carouselObject, index ) => {
