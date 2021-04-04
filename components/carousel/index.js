@@ -1,6 +1,7 @@
 // dependencies
 import { useState } from 'react';
 import classNames from 'classnames';
+import Swing from 'react-reveal/Swing';
 
 // elements
 import { ImageBackground, Tags } from '../elements';
@@ -98,7 +99,9 @@ const Carousel = ({
                                         {
                                             carouselDescriptionTags ? ( 
                                             <div className='carousel-tags-wrapper'>
-                                                <Tags tags={carouselDescriptionTags} />
+                                                <Swing>
+                                                    <Tags tags={carouselDescriptionTags} />
+                                                </Swing>
                                             </div> ) : ( null )
                                         }
 
