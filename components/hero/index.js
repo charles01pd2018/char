@@ -5,10 +5,11 @@ import Link from 'next/link';
 import { HeroWaveContent } from './content';
 
 const HeroWave = ({
+    id
 }) => {
 
     return (
-        <section id='hero' className='hero-wave-background'>
+        <section id={id} className='hero-wave-background'>
             <div className='container'>
                 <div className='hero-wave-wrapper'>
                     <div className='hero-wave-content'>
@@ -24,7 +25,7 @@ const HeroWave = ({
                 </div>
 
                 <div className='hero-wave-redirect'>
-                    <Link href='#grid-section'><a><span className='triangle-down round hero-wave-triangle'></span></a></Link>
+                    <Link href='#about'><a><span className='triangle-down round hero-wave-triangle'></span></a></Link>
                 </div>
             </div>
             <object type="image/svg+xml" data='/static/styling/wavesAnimation.svg' alt='hero-waves-animation' role='presentation' >

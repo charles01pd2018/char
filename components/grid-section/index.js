@@ -9,6 +9,7 @@ import { GridSectionContent } from './content';
 
 
 const GridSection = ({
+    id,
     alignImage='left' // 'left' || 'right'
 }) => {
     
@@ -19,7 +20,7 @@ const GridSection = ({
     const gridSectionClasses = classNames( 'grid-section', alignImage === 'left' ? 'image-align-left' : 'image-align-right' );
 
     return (
-        <section id='grid-section' className='container'>
+        <section id={id} className='container'>
             <div className={gridSectionClasses}>
 
                 <div className='grid-section-image-wrapper'>

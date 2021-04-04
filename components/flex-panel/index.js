@@ -5,11 +5,11 @@ import { FlexPanelContent } from './content';
 import Card from './card';
 
 const FlexPanel = ({
-
+    id
 }) => {
 
     return (
-        <section id='flex-panel' className='container'>
+        <section id={id} className='container'>
             <h1>Hackathons</h1>
             <p>I don’t usually win, but when I do, it’s because my team carried me</p>
                 <div className='flex-panel'>

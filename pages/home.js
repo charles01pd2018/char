@@ -17,10 +17,10 @@ const Home = ({
                     <link rel="icon" href="/favicon.ico" />
                 </Head>
 
-                  <HeroWave />
-                  <GridSection />
-                  <Carousel />
-                  <FlexPanel />
+                  <HeroWave id='welcome' />
+                  <GridSection id='about'/>
+                  <Carousel id='projects' />
+                  <FlexPanel id='hackathons '/>
         </DefaultLayout>
   );
 }

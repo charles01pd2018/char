@@ -12,7 +12,7 @@ const Footer = ({
 }) => {
 
     return (
-        <section className='footer-container'>
+        <section id='footer' className='footer-container'>
                 <footer className='footer-wrapper'>
                     <div className='footer-branding-wrapper'>
                         <Logo />

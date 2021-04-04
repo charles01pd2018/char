@@ -9,6 +9,7 @@ import { ImageBackground, Tags } from '../elements';
 import { CarouselContent } from './content';
 
 const Carousel = ({
+    id
 }) => {
 
     /* HOOKS */
@@ -40,7 +41,7 @@ const Carousel = ({
     const carouselRightIconClasses = classNames( 'chevron right carousel-toggle-icon site-link', carouselIndex === CarouselContent.length - 1 ? 'hide' : '' );
     
     return (
-        <section id='carousel' className='carousel-background'>
+        <section id={id} className='carousel-background'>
             <div className='container'>
                 <div className='carousel-title-wrapper'>
                     <h1>Projects</h1>
