@@ -63,10 +63,11 @@ const Header = ({
                     </div>
 
                     <nav ref={navRef} className='header-nav-menu'>
-                        <button onClick={hamburgerOnClick} className="header-nav-toggle hide">
-                                <span aria-label='menu-icon' className="hamburger">
-                                    <span className={hamburgerInnerClasses}></span>
-                                </span>
+                        <button onClick={hamburgerOnClick} className="header-nav-toggle">
+                            <span className="screen-reader">menu icon</span>
+                            <span aria-label='menu-icon' className="hamburger">
+                                <span className={hamburgerInnerClasses}></span>
+                            </span>
                         </button>
 
                         <ul className={headerLinksWrapperClasses}>

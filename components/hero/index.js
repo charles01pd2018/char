@@ -25,7 +25,12 @@ const HeroWave = ({
                 </div>
 
                 <div className='hero-wave-redirect'>
-                    <Link href='#about'><a><span className='triangle-down round hero-wave-triangle'></span></a></Link>
+                    <Link href='#about'>
+                        <a>
+                            <span className='screen-reader'>triangle nav site content icon</span>
+                            <span className='triangle-down round hero-wave-triangle' aria-label='triangle nav site content icon'></span>
+                        </a>
+                    </Link>
                 </div>
             </div>
             <object type="image/svg+xml" data='/static/styling/wavesAnimation.svg' alt='hero-waves-animation' role='presentation' >
