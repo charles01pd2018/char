@@ -63,7 +63,7 @@ const Header = ({
                     </div>
 
                     <nav ref={navRef} className='header-nav-menu'>
-                        <button onClick={hamburgerOnClick} className="header-nav-toggle">
+                        <button onClick={hamburgerOnClick} className="header-nav-toggle hide">
                             <span className="screen-reader">menu icon</span>
                             <span aria-label='menu-icon' className="hamburger">
                                 <span className={hamburgerInnerClasses}></span>
