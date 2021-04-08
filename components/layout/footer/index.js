@@ -1,14 +1,12 @@
 // dependencies
 import Link from 'next/link';
 
-// content
-import { footerNavLinks, footerSocialIcons } from './content';
-
 // partials
 import Logo from '../logo';
 
 const Footer = ({
-    siteTitle
+    siteName,
+    content: { footerNavLinks, footerSocialIcons, footerDescription }
 }) => {
 
     return (
@@ -52,8 +50,8 @@ const Footer = ({
                         </div>
 
                         <div className='footer-copyright-statement'>
-                            <p className='footer-small-text'>{siteTitle}</p>
-                            <p className='footer-small-text'>Built with Next.js | Deployed with Vercel</p>
+                            <p className='footer-small-text'>{siteName}</p>
+                            <p className='footer-small-text'>{footerDescription}</p>
                         </div>
 
                     </nav>

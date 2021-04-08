@@ -1,11 +1,14 @@
 // pages
 import Home from './home';
 
-const Pofo = ({
+// layout
+import { DefaultLayout } from '../layout/';
+
+export default ({
 }) => {
   return (
-    <Home />
+    <DefaultLayout>
+      <Home />
+    </DefaultLayout>
   );
 }
-
-export default Pofo;

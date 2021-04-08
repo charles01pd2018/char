@@ -1,11 +1,9 @@
 // dependencies
 import Link from 'next/link';
 
-// content
-import { HeroWaveContent } from './content';
-
 const HeroWave = ({
-    id
+    id,
+    content: { heroWaveTitle, heroWaveDescription }
 }) => {
 
     return (
@@ -13,8 +11,8 @@ const HeroWave = ({
             <div className='container'>
                 <div className='hero-wave-wrapper'>
                     <div className='hero-wave-content'>
-                        <h1 className='hero-wave-content-title'>{HeroWaveContent.title}</h1>
-                        <p className='hero-wave-content-description'>{HeroWaveContent.description}</p>
+                        <h1 className='hero-wave-content-title'>{heroWaveTitle}</h1>
+                        <p className='hero-wave-content-description'>{heroWaveDescription}</p>
                     </div>
 
                     <div className='hero-wave-visual-wrapper'>

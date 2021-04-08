@@ -3,15 +3,13 @@ import Link from 'next/link';
 import { useRef, useState, useEffect } from 'react';
 import classNames from 'classNames';
 
-// content
-import { headerNavLinks } from './content';
-
 // partials
 import Logo from '../logo';
 
 
 const Header = ({
-    siteTitle
+    siteName,
+    content: { headerNavLinks }
 }) => {
 
     /* HOOKS */
@@ -59,7 +57,7 @@ const Header = ({
             <header className='header-wrapper'>
 
                     <div className='header-branding-wrapper'>
-                        <Logo logoTitle={siteTitle} />
+                        <Logo logoTitle={siteName} />
                     </div>
 
                     <nav ref={navRef} className='header-nav-menu'>

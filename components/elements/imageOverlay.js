@@ -2,8 +2,8 @@
 import classNames from 'classnames';
 
 const ImageOverlay = ({
-    images, // array
     className,
+    images,
     imageClassName
 }) => {
 
@@ -15,7 +15,7 @@ const ImageOverlay = ({
             <div className={imageOverlayWrapperClasses}>
                 {
                     images.map( ({ imagePath, imageAltText }) => (
-                        <img key={imageAltText} src={imagePath} alt={imageAltText} role='presentation' className={imageClassNames} />
+                        <img className={imageClassNames} key={imageAltText} src={imagePath} alt={imageAltText} role='presentation' />
                     ) )
                 }
             </div>

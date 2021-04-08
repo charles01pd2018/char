@@ -4,17 +4,12 @@ import classNames from 'classnames';
 // elements
 import { ImageOverlay } from '../elements';
 
-// content
-import { GridSectionContent } from './content';
-
 
 const GridSection = ({
     id,
+    content: { gridSectionTitle, gridSectionDescription, gridSectionImages },
     alignImage='left' // 'left' || 'right'
 }) => {
-    
-    /* CONTENT */
-    const { images, description } = GridSectionContent;
 
     /* CLASSNAMES */
     const gridSectionClasses = classNames( 'grid-section', alignImage === 'left' ? 'image-align-left' : 'image-align-right' );
@@ -22,14 +17,16 @@ const GridSection = ({
     return (
         <section id={id} className='container'>
             <div className={gridSectionClasses}>
+
                 <div className='grid-section-image-wrapper'>
-                    <ImageOverlay images={images} />
+                    <ImageOverlay images={gridSectionImages} />
                 </div>
 
                 <div className='grid-section-description-wrapper'>
-                    <h1>{description.descriptionTitle}</h1>
-                    <p>{description.descriptionText}</p>
+                    <h1>{gridSectionTitle}</h1>
+                    <p>{gridSectionDescription}</p>
                 </div>
+
             </div>
         </section>
     );

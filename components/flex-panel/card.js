@@ -13,7 +13,7 @@ const Card = ({
 
             <div className='image-container card-image-wrapper'>
                 <a href={cardLink} target='_blank'>
-                    <img src={imagePath} className='flex-panel-card-image zoom-image' role='presentation' alt={imageAltText}/>
+                    <img className='flex-panel-card-image zoom-image' src={imagePath} role='presentation' alt={imageAltText}/>
                 </a>
             </div>
 

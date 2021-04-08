@@ -6,11 +6,9 @@ import Swing from 'react-reveal/Swing';
 // elements
 import { ImageBackground, Tags } from '../elements';
 
-// content
-import { CarouselContent } from './content';
-
 const Carousel = ({
-    id
+    id,
+    content: { carouselTitle, carouselDescription, carouselItems }
 }) => {
 
     /* HOOKS */
@@ -39,16 +37,16 @@ const Carousel = ({
     
     /* CLASSNAMES */
     const carouselLeftIconClasses = classNames( 'chevron left carousel-toggle-icon site-link', carouselIndex === 0 ? 'hide' : '' );
-    const carouselRightIconClasses = classNames( 'chevron right carousel-toggle-icon site-link', carouselIndex === CarouselContent.length - 1 ? 'hide' : '' );
+    const carouselRightIconClasses = classNames( 'chevron right carousel-toggle-icon site-link', carouselIndex === carouselItems.length - 1 ? 'hide' : '' );
     
     return (
         <section id={id} className='carousel-background'>
             <div className='container'>
                 <div className='carousel-title-wrapper'>
-                    <h1>Projects</h1>
+                    <h1>{carouselTitle}</h1>
                 </div>
 
-                    { CarouselContent.map( ( carouselObject, index ) => {
+                    { carouselItems.map( ( carouselObject, index ) => {
                         /* CONTENT */
                         const { carouselDisplay, carouselDescriptionTitle, carouselDescriptionText, ...optionalCarouselContent } = carouselObject; // main content
                         const { displayImages, carouselDisplayDestination } = carouselDisplay; // display content
@@ -57,6 +55,8 @@ const Carousel = ({
 
                         /* CLASSNAMES */
                         const carouselWrapperClasses = classNames( 'carousel-wrapper', handleCarouselWrapperClasses(index, carouselIndex) );
+
+                        console.log(carouselDisplayDestination)
 
                         return (
                                 <div key={`carousel-object-${index}`} className={carouselWrapperClasses}>
@@ -72,7 +72,7 @@ const Carousel = ({
                                         </div>
 
                                         <div className='carousel-state-tracker'>
-                                            {carouselIndex + 1} of {CarouselContent.length}
+                                            {carouselIndex + 1} of {carouselItems.length}
                                         </div>
                                     </div>
 
