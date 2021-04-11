@@ -56,8 +56,6 @@ const Carousel = ({
                         /* CLASSNAMES */
                         const carouselWrapperClasses = classNames( 'carousel-wrapper', handleCarouselWrapperClasses(index, carouselIndex) );
 
-                        console.log(carouselDisplayDestination)
-
                         return (
                                 <div key={`carousel-object-${index}`} className={carouselWrapperClasses}>
                                     <div className='carousel-display-wrapper'>
