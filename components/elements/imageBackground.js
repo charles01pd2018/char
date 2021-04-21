@@ -1,3 +1,4 @@
+// dependencies
 import classNames from 'classnames';
 
 const ImageBackground = ({

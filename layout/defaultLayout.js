@@ -1,14 +1,14 @@
 // components
 import { Header, Footer } from '../components/layout'
-
 // content
 import { HeaderContent, FooterContent } from '../content/layoutContent';
+
+
+var SITE_NAME = 'pofo';
 
 const DefaultLayout = ({
     children
 }) => {
-    
-    var SITE_NAME = 'pofo';
 
     return (
         <>

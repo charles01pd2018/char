@@ -1,6 +1,6 @@
 export const HomeHeroWaveContent = {
     heroWaveTitle: "pofo",
-    heroWaveDescription: "Keeping track of my dev journey"
+    heroWaveDescription: "Keeping track of what I build"
 };
 
 export const HomeGridSectionContent = {
@@ -8,8 +8,8 @@ export const HomeGridSectionContent = {
     gridSectionDescription: 'I like talking to computers',
     gridSectionImages: [ 
         {
-            imagePath: '/favicon.svg',
-            imageAltText: 'image 2 alt text',
+            imagePath: '/static/xd/me.jpeg',
+            imageAltText: 'baby',
         }, 
         {
             imagePath: '/static/branding/yooshLogo.svg',
@@ -58,9 +58,7 @@ export const HomeCarouselContent = {
                 featuresTitle: 'Tech Learnings',
                 featuresList: [
                     'Writing code and organizing code are 2 different beasts',
-                    'Choosing the right framework for your project is important',
                     'Deploying?! Server-side vs. client-side?!?!?',
-                    'Personal opinion formed: using a styling library kinda blows'
                 ]
             },
             carouselDescriptionTags: [ // optional
@@ -69,3 +67,12 @@ export const HomeCarouselContent = {
         },
     ] 
 };
+
+const HomeContent = { 
+    HomeHeroWaveContent, 
+    HomeCarouselContent, 
+    HomeFlexPanelContent,
+    HomeGridSectionContent 
+};
+
+export default HomeContent;

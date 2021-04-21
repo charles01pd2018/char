@@ -1,16 +1,20 @@
 // dependencies
 import Head from 'next/head';
-
 // layout
 import { DefaultLayout } from '../layout';
-
 // components
 import { HeroWave, FlexPanel, GridSection, Carousel } from '../components';
-
 // content
-import { HomeHeroWaveContent, HomeCarouselContent, HomeFlexPanelContent, HomeGridSectionContent } from '../content/homeContent';
+import HomeContent from '../content/homeContent';
+
 
 const Home =  ({
+  content: { 
+    HomeHeroWaveContent, 
+    HomeCarouselContent, 
+    HomeFlexPanelContent,
+    HomeGridSectionContent 
+}
 }) => {
   return (
     <DefaultLayout>
@@ -28,3 +32,12 @@ const Home =  ({
 }
 
 export default Home;
+
+
+export function getStaticProps() {
+  return {
+    props: {
+      content: HomeContent
+    }
+  }
+}

@@ -2,13 +2,13 @@
 import { useState } from 'react';
 import classNames from 'classnames';
 import Swing from 'react-reveal/Swing';
-
 // elements
 import { ImageBackground, Tags } from '../elements';
 
+
 const Carousel = ({
     id,
-    content: { carouselTitle, carouselDescription, carouselItems }
+    content: { carouselTitle, carouselItems }
 }) => {
 
     /* HOOKS */
@@ -36,8 +36,8 @@ const Carousel = ({
     }
     
     /* CLASSNAMES */
-    const carouselLeftIconClasses = classNames( 'chevron left carousel-toggle-icon site-link', carouselIndex === 0 ? 'hide' : '' );
-    const carouselRightIconClasses = classNames( 'chevron right carousel-toggle-icon site-link', carouselIndex === carouselItems.length - 1 ? 'hide' : '' );
+    const carouselLeftIconClasses = classNames( 'chevron left carousel-toggle-icon carousel-toggle-left site-link', carouselIndex === 0 && 'hide' );
+    const carouselRightIconClasses = classNames( 'chevron right carousel-toggle-icon carousel-toggle-right site-link', carouselIndex === carouselItems.length - 1 && 'hide' );
     
     return (
         <section id={id} className='carousel-background'>
@@ -103,16 +103,16 @@ const Carousel = ({
                                             </div> ) : ( null )
                                         }
 
-                                        <div className='carousel-toggle-wrapper'>
-                                            <span className='carousel-toggle-left'>
-                                                <span className='screen-reader'>carousel toggle chevron left icon</span>
-                                                <span className={carouselLeftIconClasses} aria-label='carousel toggle chevron left icon'  onClick={decrementCarouselIndex}></span>
-                                            </span>
+                                        <div className='carousel-toggle-wrapper' aria-hidden='true'>
+                                            <button className={carouselLeftIconClasses} onClick={decrementCarouselIndex}>
+                                                <span className='screen-reader'>toggle carousel left</span>
+                                                <span aria-label='toggle carousel left'></span>
+                                            </button>
 
-                                            <span className='carousel-toggle-right'>
-                                            <span className='screen-reader'>carousel toggle chevron right icon</span>
-                                                <span className={carouselRightIconClasses} aria-label='carousel toggle chevron right icon' onClick={incrementCarouselIndex}></span>
-                                            </span>
+                                            <button className={carouselRightIconClasses} onClick={incrementCarouselIndex}>
+                                                <span className='screen-reader'>toggle carousel right</span>
+                                                <span aria-label='toggle carousel right'></span>
+                                            </button>
                                         </div>
                                     </div>
                                 </div>

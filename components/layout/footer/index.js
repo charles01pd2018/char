@@ -1,8 +1,8 @@
 // dependencies
 import Link from 'next/link';
-
 // partials
 import Logo from '../logo';
+
 
 const Footer = ({
     siteName,

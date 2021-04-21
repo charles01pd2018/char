@@ -1,5 +1,6 @@
-// partials
+// elements
 import Card from './card';
+
 
 const FlexPanel = ({
     id,

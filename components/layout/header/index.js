@@ -2,7 +2,6 @@
 import Link from 'next/link';
 import { useRef, useState, useEffect } from 'react';
 import classNames from 'classnames';
-
 // partials
 import Logo from '../logo';
 
@@ -41,7 +40,10 @@ const Header = ({
 
     /* CLASSNAMES */
     const headerLinksWrapperClasses = classNames( 'header-links-wrapper', mobileHeaderActive === true ? 'header-mobile-active' : 'header-mobile-not-active' );
-    const hamburgerInnerClasses = classNames( 'hamburger-inner', mobileHeaderActive === true ? 'off-nav-is-active': '' )
+    const hamburgerInnerClasses = classNames( 'hamburger-inner', mobileHeaderActive === true && 'off-nav-is-active' )
+
+    /* CONTENT */
+    const hamburgerScreenReaderText = mobileHeaderActive ? 'close' : 'open';
 
     useEffect( () => {
         document.addEventListener('keydown', exitKey);
@@ -61,9 +63,9 @@ const Header = ({
                     </div>
 
                     <nav ref={navRef} className='header-nav-menu'>
-                        <button onClick={hamburgerOnClick} className="header-nav-toggle hide">
-                            <span className="screen-reader">menu icon</span>
-                            <span aria-label='menu-icon' className="hamburger">
+                        <button className='header-nav-toggle hide' onClick={hamburgerOnClick} aria-hidden='true'>
+                            <span className='screen-reader'>{hamburgerScreenReaderText} menu icon</span>
+                            <span aria-label='menu-icon' className='hamburger'>
                                 <span className={hamburgerInnerClasses}></span>
                             </span>
                         </button>

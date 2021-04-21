@@ -1,6 +1,7 @@
 // dependencies
 import Link from 'next/link';
 
+
 const HeroWave = ({
     id,
     content: { heroWaveTitle, heroWaveDescription }

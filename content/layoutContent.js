@@ -23,6 +23,11 @@ export const FooterContent = {
             socialIconPath: '/static/social/github.svg',
             socialIconDestination: 'https://github.com/charles01pd2018',
         },
+        {
+            socialIconType: 'medium icon',
+            socialIconPath: '/static/social/medium.svg',
+            socialIconDestination: 'https://medium.com/@yooshcrypto',
+        },
     ],
     footerDescription: 'Built with Next.js | Deployed with Vercel'
 };

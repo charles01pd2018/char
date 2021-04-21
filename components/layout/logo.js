@@ -6,7 +6,7 @@ const Logo = ({
 }) => {
 
     /* CONTENT */
-    const displayLogoTitle = logoTitle ? ( <h1 className='header-branding-title'>{logoTitle}</h1> ) : ( null );
+    const displayLogoTitle = logoTitle && ( <h1 className='header-branding-title'>{logoTitle}</h1> );
 
     return (
         <>

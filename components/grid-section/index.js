@@ -1,6 +1,5 @@
 // dependencies
 import classNames from 'classnames';
-
 // elements
 import { ImageOverlay } from '../elements';
 
