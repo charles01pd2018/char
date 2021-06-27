@@ -6,10 +6,10 @@ import Swing from 'react-reveal/Swing';
 import { ImageBackground, Tags } from '../elements';
 
 
-const Carousel = ({
+const Carousel = ( {
     id,
     content: { carouselTitle, carouselItems }
-}) => {
+} ) => {
 
     /* HOOKS */
     const [ carouselIndex, setCarouselIndex ] = useState(0); // display the first carousel item
